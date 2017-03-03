@@ -11,7 +11,7 @@ github_username:  punyaruchal
 
 # Build settings
 markdown: redcarpet
-highlighter: pygments # or rouge or null
+highlighter: rouge # or rouge or null (pygments)
 exclude: ["node_modules", "gulpfile.js", "package.json"]
 
 port: 8080
