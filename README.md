@@ -1,4 +1,4 @@
-jekyll-gulp-sass-browser-sync
+Personal site by Jekyll
 =============================
 
 A starter project including full setup for Jekyll, GulpJS, SASS, AutoPrefixer &amp; BrowserSync
