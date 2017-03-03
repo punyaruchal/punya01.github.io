@@ -5,7 +5,7 @@ description: Web and Front-end Developer bases in Nepal.
 email: info@punya.com.np
 
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://punya.com.np" # the base hostname & protocol for your site
+url: "http://punya.github.io" # the base hostname & protocol for your site
 twitter_username: punyaruchal
 github_username:  punyaruchal
 
