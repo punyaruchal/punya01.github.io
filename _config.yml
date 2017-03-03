@@ -10,8 +10,8 @@ twitter_username: punyaruchal
 github_username:  punyaruchal
 
 # Build settings
-markdown: redcarpet
-highlighter: rouge # or rouge or null (pygments)
+markdown: kramdown
+highlighter: rouge # or rouge or null
 exclude: ["node_modules", "gulpfile.js", "package.json"]
 
 port: 8080
