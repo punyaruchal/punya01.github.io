@@ -1,42 +1,66 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{% if page.title %} {{ page.title }} {% else %} {{ site.title }} &#58; {{ site:description }} {% endif %}</title>
+    <meta name="viewport" content="width=device-width">
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
-
-    </head>
-    <body>
-
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
-
-          {{ content }}
+     <meta name="theme-color" content="#2fcc71">
+    <link rel="icon" sizes="192x192" href="{{ "/assets/img/favicon-2x.png" | prepend: site.baseurl }}">
+    <link rel="shortcut icon" type="image/png" href="{{ "/assets/img/favicon.png" | prepend: site.baseurl }}">
 
 
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Your Name is<br />
-                What You Are<br />
-                you@example.com
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-              </p>
-            </div>
-          </div>
-        </div>
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 
-    </body>
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
+
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+
+  </head>
+
+  <body class="loading">
+    <div id="wrapper">
+      <div id="bg"></div>
+      <div id="overlay"></div>
+      <div id="main">
+
+        <!-- Header -->
+        <header id="header">
+          <h1>Punya Ruchal</h1>
+          <p>Web &nbsp;&bull;&nbsp; Front-end &nbsp;&bull;&nbsp; Developer</p>
+          <nav>
+            <ul>
+              <li><a href="https://twitter.com/punyaruchal" class="icon fa-twitter" title="Twitter"><span class="label">Twitter</span></a></li>
+              <li><a href="https://www.facebook.com/punyaruchal" class="icon fa-facebook" title="Facebook"><span class="label">Facebook</span></a></li>
+              <li><a href="https://medium.com/@punyaruchal" class="icon fa-medium" title="Medium"><span class="label">Medium</span></a></li>
+              <li><a href="https://github.com/punyaruchal" class="icon fa-github" title="Github"><span class="label">Github</span></a></li>
+              <li><a href="http://codepen.io/punyaruchal" class="icon fa-codepen" title="Codepen"><span class="label">Codepen</span></a></li>
+              <li><a href="mailto:info@punya.com.np" class="icon fa-envelope-o" title="Email"><span class="label">Email</span></a></li>
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Footer -->
+        <footer id="footer">
+          <span class="copyright">&copy; html up</span>
+        </footer>
+      </div>
+    </div>
+
+    <!-- <script src="{{ "/assets/js/jquery-1.11.3.min.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/assets/js/script.js" | prepend: site.baseurl }}"></script> -->
+
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script>
+      window.onload = function() { document.body.className = ''; }
+      window.ontouchmove = function() { return false; }
+      window.onorientationchange = function() { document.body.scrollTop = 0; }
+    </script>
+  </body>
 </html>

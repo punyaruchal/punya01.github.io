@@ -1,4 +1,20 @@
-name: Your New Jekyll Site
+# Site settings
+title: Punya Ruchal
+name: Punya Ruchal
+description: Web and Front-end Developer bases in Nepal.
+email: info@punya.com.np
+
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://punya.com.np" # the base hostname & protocol for your site
+twitter_username: punyaruchal
+github_username:  punyaruchal
+
+# Build settings
 markdown: redcarpet
 highlighter: pygments # or rouge or null
 exclude: ["node_modules", "gulpfile.js", "package.json"]
+
+port: 8080
+
+
+
